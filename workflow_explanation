@@ -1,0 +1,15 @@
+-> The Hydrogen compiler takes a .hy source file and processes it in these stages:
+
+Tokenizer: Breaks code into tokens.
+
+Parser: Builds an AST, now supports arithmetic with precedence.
+
+Code Generator: Converts AST to NASM assembly (Windows compatible).
+
+-> Assembler & Linker:
+
+NASM (Netwide Assembler)→ Takes the generated .asm file and converts it into an object file (.obj)
+
+GCC (GNU COMPILER COLLECTION) → Takes the .obj file and links it with necessary libraries to produce a final Windows executable (.exe).
+
+-> Execution: Runs the final .exe and prints output.
